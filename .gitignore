@@ -1,0 +1,27 @@
+# VS Code
+__pycache__/
+.vscode/
+
+# python 100 days files
+*.zip
+Wallpapers/
+__MACOSX/
+test.md
+test.py
+
+
+# instance/
+# static/code/
+活頁簿1.xlsx
+
+
+# python secret key files
+secret_key.py
+
+# My Code
+
+
+# DotEnv configuration
+.env
+
+
