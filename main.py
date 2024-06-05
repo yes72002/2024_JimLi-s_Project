@@ -124,7 +124,7 @@ def show_post(post_id):
     elif post_id == 31: return render_template("pj31_cafe_and_wifi_website.html", post=requested_post)
     elif post_id == 32: return render_template("pj32_todo_list.html", post=requested_post)
     elif post_id == 33: return render_template("pj33_disapearing_text.html", post=requested_post)
-    elif post_id == 34: return render_template("pj34_audio_book_scraping", post=requested_post)
+    elif post_id == 34: return render_template("pj34_audio_book_scraping.html", post=requested_post)
     elif post_id == 35: return render_template("pj35_dinosaur.html", post=requested_post)
     elif post_id == 36: return render_template("pj36_space_invader.html", post=requested_post)
     elif post_id == 37: return render_template("pj37_coffee_online_shop.html", post=requested_post)

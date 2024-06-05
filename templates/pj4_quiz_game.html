@@ -13,7 +13,22 @@
           <div class="col-md-10 col-lg-8 col-xl-7">
             <h3 class="post-title">{{ post.name }}</h3>
             <!-- Demo -->
-            {% include "page_demo.html" %}
+            <div class="card">
+              <div class="card-body">
+                <h4>Demo:</h4>
+                  {% if post.img_url and post.img_url != "NULL" %}
+                    <!-- <p>{{ post.img_url }}</p> -->
+                    <img src="{{ post.img_url }}" class="d-flex justify-content-center col-md-5 w-100 pb-1" alt="...">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczPPYbx2Xl2d-Csw5QicBqzTBOzhvZ9o-Vwnl8zgK87HRjy_5bdCk_0CN4UWGznpPu451aVWUSjF7tmKe52SAGJwqzHOyUumz5fu3_Kgm7WqkeDcFr4=w1920-h1080" class="d-flex justify-content-center col-md-5 w-100" alt="...">
+                  {% endif %}
+                  {% if post.video_url and post.video_url != "NULL" %}
+                    <!-- <p>{{ post.video_url }}</p> -->
+                    <div class="video-container">
+                      <iframe width="672" height="378" src="{{ post.video_url }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                  {% endif %}
+              </div>
+            </div>
             <!-- Description -->
             {% include "page_description.html" %}
             <!-- Code -->

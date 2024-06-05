@@ -13,7 +13,26 @@
           <div class="col-md-10 col-lg-8 col-xl-7">
             <h3 class="post-title">{{ post.name }}</h3>
             <!-- Demo -->
-            {% include "page_demo.html" %}
+            <div class="card">
+              <div class="card-body">
+                <h4>Demo:</h4>
+                  {% if post.img_url and post.img_url != "NULL" %}
+                    <!-- <p>{{ post.img_url }}</p> -->
+                    <img src="{{ post.img_url }}" class="d-flex justify-content-center col-md-5 w-100 pb-1" alt="...">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczNJM-th8S1LuD1uxa4-Tujlh450_EuYGdMfGPZOiNx2XeWWBRlQ_NGUaDjSUbqy8-WtsVpbbdfXnr8_SBfQDecxdxDCfOccpzb3EQVolPYvA6R9hCg=w1920-h1080" class="d-flex justify-content-center col-md-5 w-100 pb-1" alt="...">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczNfXHBCUKr8dVe6BtDRD_r0lndGxqJGyyLUHMBqbqFtXXy5dUpGqG0sQ08Sa9FcB1JWy-rvmIIMdC3A-GNITm_u17DBkX0D9sFTl_SRCn6EOXSm_9Y=w1920-h1080" class="d-flex justify-content-center col-md-5 w-100 pb-1" alt="...">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczPePC-IJL4IyGH9pGdWRoOLZN2b5hWaj9AU7h9m04_UTjUtrJ4vHL52NViZHTFELU6I5B8ysaew5V38yKgjusAkadDY3LWkWiAj4OORMDZgaGRrfVg=w1920-h1080" class="d-flex justify-content-center col-md-5 w-100 pb-1" alt="...">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczP5LUCTH2zadNl6EiapvqShuqtkdQS_wyfgAjs0Eji871A0YQsFRkjtPfIcIvOp3tnOoO0jaN2W6U60UrVOEQBGY70cGE01SF5wFqLXlobeKLYx7Lg=w1920-h1080" class="d-flex justify-content-center col-md-5 w-100 pb-1" alt="...">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczOSZhEiRU9R5e-Q4uR0zeNnp7L5R4Dmoh9ZhY5IQ43Y9n4k1dGZ9OkMK5eKgIesEbhVZtoTdmRCIhPQMLFAfQRikOFHBQCpd9af1ovq6vb64JHhjUs=w1920-h1080" class="d-flex justify-content-center col-md-5 w-100 pb-1" alt="...">
+                  {% endif %}
+                  {% if post.video_url and post.video_url != "NULL" %}
+                    <!-- <p>{{ post.video_url }}</p> -->
+                    <div class="video-container">
+                      <iframe width="672" height="378" src="{{ post.video_url }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                  {% endif %}
+              </div>
+            </div>
             <!-- Description -->
             {% include "page_description.html" %}
             <!-- Code -->

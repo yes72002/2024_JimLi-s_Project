@@ -13,7 +13,25 @@
           <div class="col-md-10 col-lg-8 col-xl-7">
             <h3 class="post-title">{{ post.name }}</h3>
             <!-- Demo -->
-            {% include "page_demo.html" %}
+            <div class="card">
+              <div class="card-body">
+                <h4>Demo:</h4>
+                  {% if post.img_url and post.img_url != "NULL" %}
+                    <!-- <p>{{ post.img_url }}</p> -->
+                    <img src="{{ post.img_url }}" class="d-flex justify-content-center col-md-5 w-100 pb-1" alt="...">
+                    <div class="d-flex justify-content-center">
+                      <img src="https://as1.ftcdn.net/v2/jpg/02/06/94/70/1000_F_206947090_ujVMfvIu4vq6YczeDUIZ37AMCB1VnK6Y.jpg" class="col-md-5 pb-1" alt="...">
+                    </div>
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczP5Y8YVbuZ-Jy06F4McX2e0L_kxv-KvncA8dvUij8qHt-bYG3ugR6OkM8doSJ1aDRx2FpqAmpvWEyib0l0AR66YixeS1wEHLCzTjm3V7qPFWuCqIDI=w1920-h1080" class="d-flex justify-content-center col-md-5 w-100 pb-1" alt="...">
+                  {% endif %}
+                  {% if post.video_url and post.video_url != "NULL" %}
+                    <!-- <p>{{ post.video_url }}</p> -->
+                    <div class="video-container">
+                      <iframe width="672" height="378" src="{{ post.video_url }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                  {% endif %}
+              </div>
+            </div>
             <!-- Description -->
             {% include "page_description.html" %}
             <!-- Code -->
